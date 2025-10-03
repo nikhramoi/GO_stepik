@@ -2,14 +2,29 @@ package main
 
 import (
 	"fmt"
-	"math/rand/v2"
 )
 
 func main() {
-	randomNum := rand.IntN(500)
-	fmt.Println(randomNum)
-	max := 50
-	min := 10
-	randomNum2 := rand.IntN(max-min) + min
-	fmt.Println(randomNum2)
+	arr := [3]int{1, 2, 3}
+	//var arr2 := [...]{"qwe","sad","asdasd"}
+	var arr3 = [...]string{"qwe", "sad", "asdasd"}
+	arr5 := [...]string{"foo", "bar"}
+	arr3[0] = "qwe"
+	arr3[1] = "sad"
+	arr3[2] = "asdasdsadsadsadasdasd"
+	fmt.Println(arr, arr3, arr5)
+
+	var slice = make([]string, 5, 5)
+	fmt.Println(slice, len(slice), cap(slice))
+	slice[0] = "qwe"
+	slice[1] = "sad"
+	slice[2] = "asdasdsadsadsadasdasd"
+	slice[3] = "asdasdsadsadsadasdasd"
+	slice[4] = "asdasdsadsadsadasdasd"
+	fmt.Println(slice, len(slice), cap(slice))
+	slice = append(slice, "foo")
+	slice = append(slice, "bar")
+	fmt.Println(slice, len(slice), cap(slice))
+	slice = append(slice, "barbasisca")
+	fmt.Println(slice, len(slice), cap(slice))
 }
